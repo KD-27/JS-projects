@@ -1,0 +1,114 @@
+body{
+  background-color: rgb(69, 69, 69);
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  margin-top: 30px;
+}
+
+.description-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Roboto, Arial;
+  font-weight: 700;
+}
+
+.line-one{
+  font-size: 30px;
+  margin-bottom: 0;
+  color: rgb(22, 22, 22);
+}
+.line-two{
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.rock-container, .paper-container, .scissors-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rock, .paper, .scissors{
+  width: 200px;
+  height: 200px;
+  background-color: rgb(136, 136, 140);
+  border-color : black;
+  border-radius: 100px;
+  border-width: 10px;
+}
+
+.rock-img, .paper-img, .scissors-img{
+  width: 120px;
+}
+
+.rock-info, .paper-info, .scissors-info{
+  font-family: Roboto, Arial;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.game-status{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.game-status-info{
+  font-family: Roboto, Arial;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.bottom-container{
+  height: 140px;
+  display: grid;
+  grid-template-columns:60% 40% ;
+}
+
+.current-game-status{
+  height: 144px;
+  background-color: gray;
+  display: grid;
+  grid-template-columns:25% 22% 6% 22% 25%;
+  align-items: center;
+  
+}
+.Results-info{
+  height: 144px;
+  background-color: rgb(139, 43, 43);
+  padding-left: 50px;
+  
+}
+
+.Wins, .Losses, .Ties{
+  font-family: Roboto, Arial;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.You-img, .computer-img{
+  max-width : 100px;
+  height: auto;
+}
+
+.You-info, .computer-info{
+  font-family: Roboto, Arial;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.VS{
+  font-family: Roboto, Arial;
+  font-size: 15px;
+}
+
+.You-img-container, .Computer-img-container, .VS, .You-info, .computer-info{
+  display: flex;
+  justify-content: center;
+}

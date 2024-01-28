@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock-Paper-Scissors
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class=" description-container">
+      <p class="line-one">Play with Me !</p>
+      <p class="line-two">Rock Paper Scissors</p>
+    </div>
+
+    <div>
+      <div class="button-container">
+        <div class="rock-container">
+          <button class="rock" onclick="
+            myMove = 'rock';
+            computerMove = pickComputerMove(); 
+            document.getElementById('p1').innerHTML = playGame(myMove,computerMove);
+
+            ">
+            <img class="rock-img" src="rock-paper-scissors-images/rock-emoji.png">
+          </button>
+          <p class="rock-info">Rock</p>
+        </div>
+
+        <div class="paper-container">
+          <button class="paper" onclick="
+          myMove = 'paper';
+          computerMove = pickComputerMove();
+          document.getElementById('p1').innerHTML = playGame(myMove,computerMove);
+          ">
+            <img class="paper-img" src="rock-paper-scissors-images/paper-emoji.png">
+          </button>
+          <p class="paper-info">Paper</p>
+        </div>
+
+        <div class="scissors-container">
+          <button class="scissors" onclick="
+          myMove = 'scissors';
+          computerMove = pickComputerMove();
+          document.getElementById('p1').innerHTML = playGame(myMove,computerMove);
+            ">
+            <img class="scissors-img" src="rock-paper-scissors-images/scissors-emoji.png">
+          </button>
+          <p class="scissors-info">Scissors</p>
+        </div> 
+      </div>
+    </div>
+
+    <div class="game-status">
+      <p id = "p1" class="game-status-info">Choose One. Hurry up!</p>
+    </div>
+
+    <div class="bottom-container">
+      <div class="current-game-status">
+        <div class="You-info">
+          <p>You</p>
+        </div >
+        <div class="You-img-container">
+          <p class="js-you-img">
+            <img class="You-img" src="rock-paper-scissors-images/paper-emoji.png" >
+          </p> 
+        </div>
+        <div class="VS">
+          <p>VS</p>
+        </div >
+        <div class="Computer-img-container">
+          <p>
+            <img class="computer-img" src="rock-paper-scissors-images/paper-emoji.png" >
+          </p>
+        </div>
+        <div class="computer-info">
+          <p class="computer-text">Computer</p>
+        </div>
+      </div>
+
+      <div id="js-results-info" class="Results-info">
+        <p id="js-wins" class="Wins">Wins : 0</p>
+        <p id="js-losses" class="Losses">Losses : 0</p>
+        <p id="js-ties" class="Ties">Ties : 0</p>
+        <button class="Reset" onclick="
+          score.wins =0;
+          score.Losses = 0;
+          score.Ties = 0;
+          localStorage.removeItem('score');
+
+          updateScoreElements();
+
+        ">Reset Score</button>
+      </div>
+    </div>
+
+    <Script src="script.js"></Script>
+  </body>
+</html>
